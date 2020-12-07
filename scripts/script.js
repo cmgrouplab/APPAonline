@@ -287,9 +287,9 @@ function coorelationPlot() {
             showgrid: false,
             mirror: 'ticks',
             zerolinecolor: '#000000',
-            // zerolinewidth: 1,
+            zerolinewidth: 1,
             // linecolor: '#000000',
-            // linewidth: 1,
+            linewidth: 0,
             showticklabels: true
         },
         yaxis: {
@@ -300,9 +300,9 @@ function coorelationPlot() {
             showgrid: false,
             mirror: 'ticks',
             zerolinecolor: '#000000',
-            // zerolinewidth: 1,
+            zerolinewidth: 1,
             // linecolor: '#000000',
-            // linewidth: 1,
+            linewidth: 0,
             showticklabels: true
 
         }
