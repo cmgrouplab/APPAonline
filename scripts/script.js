@@ -287,7 +287,7 @@ function coorelationPlot() {
             showgrid: false,
             mirror: 'ticks',
             zerolinecolor: '#000000',
-            // zerolinewidth: 6,
+            zerolinewidth: 1,
             linecolor: '#000000',
             linewidth: 2,
             showticklabels: true
@@ -300,7 +300,7 @@ function coorelationPlot() {
             showgrid: false,
             mirror: 'ticks',
             zerolinecolor: '#000000',
-            // zerolinewidth: 6,
+            zerolinewidth: 1,
             linecolor: '#000000',
             linewidth: 2,
             showticklabels: true
