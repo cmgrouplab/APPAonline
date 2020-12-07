@@ -1,0 +1,30 @@
+<html>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script src="normalDistribution.js"></script>
+<script src="script.js"></script>
+<script src="velocityCorrealation.js"></script>
+<script src="animation.js"></script>
+<!-- <script src="1.js"></script> -->
+<link rel="stylesheet" href="style.css" />
+
+
+<body>
+    <div class="input">
+        <p density>Density:<input id="density"></p>
+        <p radius>Radius: <input id="radius"></p>
+        <p step>Run Step: <input id="step"></p>
+        <p std>rotation diffusion: <input id="std"></p>
+        <p angle>Angle: <input id="angle"></p>
+        <p angle>calculate vCorr: <input id="calVcorr"></p>
+    </div>
+
+    <div class="output" id="outputText"></div>
+    <div class="output" id="outputText2"></div>
+
+    <button class="runButton" onclick=simulation()> Click me!! </button>
+    <button class="runButton" onclick=coorelationPlot()> writedata </button>
+
+</body>
+
+
+</html>

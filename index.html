@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="./scripts/normalDistribution.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/velocityCorrealation.js"></script>
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/time.js"></script>
+    <meta charset="UTF-8">
+    <title>APPA Model</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mystyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <meta name="Copyright" content="CMG">
+</head>
+
+
+<body>
+    <footer class="copyright"> <small>&copy; Copyright 2020 -
+            <script>
+                document.write(new Date().getFullYear())
+            </script>, Complex Materials Group @ASU. All rights reserved.</small>
+    </footer>
+    <div class="title">
+        <h>
+            Active Particles with Polarized Eﬀective Attraction
+        </h>
+    </div>
+    <!-- <p density>Density:<input type="text" value="qing" id="density"></p> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="team" class="team circle-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="team-box">
+
+                        <form>
+                            <ul>
+
+                                <li>
+                                    <input type="radio" id="rad1" checked name="rad">
+
+                                    <label for="rad1"><span class="team-name text-white">Calculate velocity
+                                            correlation</span></label>
+
+                                    <div class="accslide d-flex">
+                                        <div class="team-inner">
+                                            <div class="team-about2">
+                                                <p>
+                                                    Velocity correlation function quantifies
+                                                    the particle velocity correlation on the two-body (pair)
+                                                    level. Perfectly correlated pair dynamics is associated with C(r) =
+                                                    1. This is the case when the velocities of all particles are
+                                                    perfectly aligned, e.g., indicating the cells are following one
+                                                    another during collective migration. On the other hand, C(r) = −1 is
+                                                    associated with anti-parallel velocities, i.e., when the cells are
+                                                    moving towards one another. C(r) = 0 indicates no correlations among
+                                                    the particles (migrating cells).
+                                                    <br>
+                                                    <br>
+                                                    Enter the step, click "Calculate"
+                                                    button,
+                                                    see velocity correlation funtion for the step. Pay attention that
+                                                    calculating velocity correlation function must be after running
+                                                    simulation.
+
+
+                                                    <form class="inputParameters" id="formParameters">
+                                                        <p angle>Step:
+                                                            <input type="number" value="" step="1" min="0"
+                                                                style="width:100px" id="calVcorr"></p>
+                                                    </form>
+                                                </p>
+
+                                                <!-- <button class="btn btn-danger"> Run Simulation -->
+                                                <input type="button" class="btn btn-danger" value="Calculate"
+                                                    onclick=coorelationPlot()>
+                        </form>
+                        </p>
+
+                        <!-- <span class="hr-line ml-0 mt-4 mb-4"></span>
+                                                <a href="" class="btn btn-danger">Read more</a> -->
+                    </div>
+                    <div class="output" id="outputText2"></div>
+                </div>
+            </div>
+            </li>
+
+            <li>
+                <input type="radio" id="rad2" checked name="rad">
+
+                <label for="rad2"><span class="team-name text-white">Run Simulation</span></label>
+
+                <div class="accslide d-flex">
+                    <div class="team-inner">
+                        <div class="team-about2">
+                            <p>
+                                Because of computation time, we restrict the parameters whthin these ranges. Density
+                                &#8712 <b>(0,0.5]</b>. Radius &#8712 <b>[0.001,0.5]</b>. D<sub>r</sub> and
+                                Angle Tolerance
+                                &#8712 <b>[0,360]</b> in degree. Run Step &#8712 <b>[10,20000]</b>. It may take a couple
+                                of
+                                minutes for large number of particles. Click "Run Simulation" button to see results!
+
+                                <br>
+                                <br>
+                                <form class="inputParameters" id="formParameters">
+                                    <p density>Density: <input type="number" value="0.3" step="0.1" min="0" max="0.5"
+                                            id="density" style="width:120px">
+                                    </p>
+                                    <p radius>Radius: <input type="number" value="0.02" step="0.001" min="0.001"
+                                            max="0.5" style="width:122px" id="radius"></p>
+
+                                    <p std>D<sub>r</sub>: <input type="number" value="1" step="1" min="0" max="360"
+                                            style="width:155px" id="std">
+                                    </p>
+                                    <p angle>Angle Tolerance: <input type="number" value="10" step="1" min="0" max="360"
+                                            style="width:62px" id="angle"> </p>
+                                    <p step>Run Step: <input type="number" value="1000" step="1000" min="10" max="20000"
+                                            style="width:105px" id="step"></p>
+
+                                    <!-- <button class="btn btn-danger"> Run Simulation -->
+                                    <input type="button" class="btn btn-danger" value="Run Simulation"
+                                        onclick=checkParameters()>
+                                </form>
+                            </p>
+
+                            <div class="showmsg" id="showmsg"></div>
+                            <!-- <span class="hr-line ml-0 mt-4 mb-4"></span>
+                                                <a href="" class="btn btn-danger">Read more</a> -->
+                        </div>
+
+
+                        <div class="output" id="outputText"></div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" id="rad3" checked name="rad">
+
+                <label for="rad3"><span class="team-name text-white">Introduction</span></label>
+
+                <div class="accslide d-flex">
+                    <div class="team-inner3">
+                        <div class="team-about3">
+                            <p>
+                                <big><b>About APPA Model</b></big>
+                                <br>
+                                Active-particle model with polarized eﬀective attractions (APPA) is a model for
+                                emergent multi-cellular migration dynamics resulted from ECM-mediated
+                                mechanical communications. Research regarding this model has been <a
+                                    href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.102.052409">published</a>
+                                on <i>PRE</i>.
+                                The following picture is a schematic illustration of the eﬀective polarized attraction
+                                between two migrating cells, which depends on both the positions and velocities of the
+                                cells.
+                                Speciﬁcally, the eﬀective attraction is non-zero only when the two cells are moving
+                                towards one another (i.e., with the velocities anti-parallel aligned within a prescribed
+                                tolerance).
+                                <div class="team-img">
+                                    <img src="./pictures/model.png" alt="">
+
+                                </div>
+                            </p>
+                            <p>
+                                <br>
+                                <big><b>About Simulation</b></big>
+                                <br>
+                                Particle simulation of the cells is carried out in a periodic box of size 1. In the
+                                simulation, boundary distance condition is used between any pair of particles.
+                                There are 4 adjustable parameters. <b>Density</b> is the number density of particles.
+                                <b>Radius</b> is the radius of particles. The number of particles is caculated based on
+                                the density and the radius. <b>D<sub>r</sub></b> is strength of diffusive noise
+                                affecting particles. The mean of the
+                                gassuian distribution is 0, and standard deviation is D<sub>r</sub>.
+                                <b>Angle tolerance</b> is
+                                the value within which two velocity directions are considered under anti-parallel
+                                (marked as red shade in the illustration).
+
+                                <br>
+                                <br>
+                                Details of the parameters and model can be found in the <a
+                                    href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.102.052409">paper</a>
+                                <i>Modeling
+                                    multicellular dynamics regulated by extracellular-matrix-mediated mechanical
+                                    communication via active particles with polarized effective attraction</i>.
+
+
+                            </p>
+
+                            <!-- <span class="hr-line ml-0 mt-4 mb-4"></span>
+                                                        <a href="" class="btn btn-danger">Read more</a> -->
+                        </div>
+                        <!-- <div class="team-img">
+                            <img src="model.png" alt="">
+                        </div> -->
+                    </div>
+                </div>
+            </li>
+            </ul>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    function PostData() {
+        $.ajax({
+            type: "POST",
+            url: "post.go",
+            data: "",
+            success: function (msg) {
+            }
+        });
+        return false;
+    }
+</script>
