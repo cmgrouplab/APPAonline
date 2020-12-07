@@ -288,8 +288,8 @@ function coorelationPlot() {
             mirror: 'ticks',
             zerolinecolor: '#000000',
             zerolinewidth: 1,
-            // linecolor: '#000000',
-            linewidth: 0,
+            linecolor: '#000000',
+            linewidth: 1,
             showticklabels: true
         },
         yaxis: {
@@ -301,8 +301,8 @@ function coorelationPlot() {
             mirror: 'ticks',
             zerolinecolor: '#000000',
             zerolinewidth: 1,
-            // linecolor: '#000000',
-            linewidth: 0,
+            linecolor: '#000000',
+            linewidth: 1,
             showticklabels: true
 
         }
