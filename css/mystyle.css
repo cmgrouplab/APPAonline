@@ -16,8 +16,11 @@
 
 .title{
   /* font-size: 250%; */
+  position: fixed;
   height: 10px;
   width: 950px;
+  left: 0;
+  width: 100%;
   /* margin-left: 308px; */
   margin-top: 50px;
   margin: 0 auto;
