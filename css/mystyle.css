@@ -18,9 +18,12 @@
   /* font-size: 250%; */
   height: 10px;
   width: 950px;
-  margin-left: 308px;
+  /* margin-left: 308px; */
   margin-top: 50px;
+  margin: 0 auto;
   background-color:rgba(255, 255, 255, 0); 
+  /* background-color:yellow; */
+  text-align: center;
 } 
 .title h{
   font-size: 280%;
@@ -29,6 +32,7 @@
   position: relative;
   height: 0px;
   color: #13334c;
+  text-align: center;
 }
 
 .output {
