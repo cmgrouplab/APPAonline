@@ -289,7 +289,7 @@ function coorelationPlot() {
             zerolinecolor: '#000000',
             zerolinewidth: 1,
             linecolor: '#000000',
-            linewidth: 1,
+            linewidth: 2,
             showticklabels: true
         },
         yaxis: {
@@ -302,7 +302,7 @@ function coorelationPlot() {
             zerolinecolor: '#000000',
             zerolinewidth: 1,
             linecolor: '#000000',
-            linewidth: 1,
+            linewidth: 2,
             showticklabels: true
 
         }
