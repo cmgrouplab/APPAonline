@@ -60,16 +60,24 @@ img{width:250px;height:280px}
 
 .team-box{
     position: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* left: 10%; */
-  width: 1200px;
-  margin-top:-70px;
+    width: 100%;
+  text-align: center;
+  /* width: 100%; */
+  margin: auto;
+  position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
   /* background-color:yellow; */
     padding: 35px 0;
-    MARGIN-RIGHT: auto;
-    MARGIN-LEFT: auto;
+    /* MARGIN-RIGHT: auto;
+    MARGIN-LEFT: auto; */
     
 }
+
 
 .team-box .accslide {
     display:block;
@@ -99,7 +107,7 @@ img{width:250px;height:280px}
     width: 980px;
     height: 550px;
     display: inline-block;
-    float: left;
+    /* float: middle; */
     text-align:justify;
     background: rgba(255, 255, 255,0.4);
     z-index: 1;
@@ -135,6 +143,8 @@ img{width:250px;height:280px}
 .team-box .accslide .team-inner{
     width: 960px;
     height: 200px;
+    /* background:yellow; */
+    align-self:center ;
     background: rgba(255, 255, 255, 0);
 }
 .team-box input[type="radio"]:checked+label ~ .accslide {
@@ -145,6 +155,7 @@ img{width:250px;height:280px}
 .team-inner3{
   width: 960px;
   height: 200px;
+  align-self:center ;
   background: rgba(255, 255, 255, 0);
 }
 
