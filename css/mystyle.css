@@ -17,18 +17,22 @@
 .title{
   /* font-size: 250%; */
   position: fixed;
-  height: 10px;
+  /* height: 10px; */
   width: 950px;
   left: 0;
   width: 100%;
+  font-size: 280%;
+  font-weight: 700;
+  font-style: italic;
+  color: #13334c;
   /* margin-left: 308px; */
-  margin-top: 50px;
-  margin: 0 auto;
+  /* margin-top: 50px; */
+  /* margin: 0 auto; */
   background-color:rgba(255, 255, 255, 0); 
   /* background-color:yellow; */
   text-align: center;
 } 
-.title h{
+/* .title h{
   font-size: 280%;
   font-weight: 700;
   font-style: italic;
@@ -36,7 +40,7 @@
   height: 0px;
   color: #13334c;
   text-align: center;
-}
+} */
 
 .output {
   display: inline-block;
